@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Publishing Schedule</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LinkedIn Publishing Schedule Generator</h1>
+
+    <!-- Persona Section -->
+    <section id="persona">
+      <h2>Persona Information</h2>
+
+      <!-- User Name Input -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <!-- Company Input -->
+      <label for="company">Company:</label>
+      <input type="text" id="company" placeholder="Enter your company name">
+
+      <!-- Job Title Input -->
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" id="jobTitle" placeholder="Enter your job title">
+
+      <!-- Personal Story Input -->
+      <label for="personalStory">Personal Story:</label>
+      <textarea id="personalStory" rows="4" placeholder="Share your personal story here..."></textarea>
+
+      <!-- Business Story Input -->
+      <label for="businessStory">Business Story:</label>
+      <textarea id="businessStory" rows="4" placeholder="Share your business story here..."></textarea>
+
+      <!-- File Input for User's Posts -->
+      <label for="fileInput">Upload User Posts:</label>
+      <input type="file" id="fileInput" multiple>
+      <div id="imageContainer"></div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy">
+      <h2>Strategy Information</h2>
+
+      <!-- Target Sector Input -->
+      <label for="targetSector">Target Sector:</label>
+      <input type="text" id="targetSector" placeholder="Enter target sector">
+
+      <!-- Target Audience Input -->
+      <label for="targetAudience">Target Audience:</label>
+      <input type="text" id="targetAudience" placeholder="Enter target audience">
+
+      <!-- Number of Posts Input -->
+      <label for="numPosts">Number of Posts:</label>
+      <input type="number" id="numPosts" placeholder="Enter number of posts">
+
+      <!-- Timeline Dropdown -->
+      <label for="timeline">Timeline:</label>
+      <select id="timeline">
+        <option value="1_week">1 Week</option>
+        <option value="1_month">1 Month</option>
+        <option value="3_months">3 Months</option>
+        <option value="6_months">6 Months</option>
+      </select>
+
+      <!-- Purpose Input -->
+      <label for="purpose">Purpose:</label>
+      <textarea id="purpose" rows="2" placeholder="Define the purpose"></textarea>
+
+      <!-- Goals Input -->
+      <label for="goals">Goals:</label>
+      <textarea id="goals" rows="2" placeholder="Set your goals"></textarea>
+
+      <!-- Content Input -->
+      <label for="content">Content:</label>
+      <textarea id="content" rows="4" placeholder="Describe the content"></textarea>
+
+      <!-- File Input for Target's Posts -->
+      <label for="targetFileInput">Upload Target Posts:</label>
+      <input type="file" id="targetFileInput" multiple>
+      <div id="targetImageContainer"></div>
+    </section>
+
+    <!-- Analyze Button -->
+    <button id="analyzeButton">Analyze and Generate Schedule</button>
+
+    <!-- Publishing Schedule Section -->
+    <section id="scheduleContainer">
+      <h2>Generated Publishing Schedule</h2>
+      <!-- The schedule will be displayed here -->
+      <div id="scheduleOutput"></div>
+    </section>
+
+    <!-- Regenerate Button -->
+    <button id="regenerateButton" style="display:none;">Regenerate Schedule</button>
+  </div>
+
+  <!-- Include Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <!-- Your main.js script should be included after the Marked.js library -->
+  <script src="main.js"></script>
+</body>
+</html>
